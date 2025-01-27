@@ -1,0 +1,17 @@
+import 'dart:io';
+
+HttpClient createHttpClient() {
+  final httpClient = HttpClient()
+    ..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+  return httpClient;
+}
+
+void makeRequest() async {
+  final client = HttpClient();
+  client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+
+  final request = await client.getUrl(Uri.parse('https://your-api.com'));
+  final response = await request.close();
+
+  print(await response.transform(SystemEncoding().decoder).join());
+}
