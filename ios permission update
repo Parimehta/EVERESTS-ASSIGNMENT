@@ -1,0 +1,8 @@
+Update Info.plist
+
+Navigate to ios/Runner/Info.plist and add:
+
+<key>NSCameraUsageDescription</key>
+<string>We need access to the camera for scanning and recording.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>We need access to the microphone for recording videos.</string>
