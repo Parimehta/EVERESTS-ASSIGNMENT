@@ -1,0 +1,28 @@
+Fix 1: Modify AndroidManifest.xml
+
+Navigate to:
+
+C:\Users\user\AppData\Local\Pub\Cache\hosted\pub.dev\video_thumbnail-0.5.3\android\src\main\AndroidManifest.xml
+
+Remove the package attribute so it looks like this:
+
+xml
+Copy
+Edit
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- other manifest content -->
+</manifest>
+
+Fix 2: Add namespace in build.gradle
+
+Navigate to:
+
+C:\Users\user\AppData\Local\Pub\Cache\hosted\pub.dev\video_thumbnail-0.5.3\android\build.gradle
+
+Add the namespace under the android block:
+
+android {
+    namespace "xyz.justsoft.video_thumbnail"
+    // other configurations
+}
+
