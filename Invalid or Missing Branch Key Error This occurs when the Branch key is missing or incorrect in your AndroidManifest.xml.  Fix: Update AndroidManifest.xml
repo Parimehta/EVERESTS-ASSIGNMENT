@@ -1,0 +1,8 @@
+<application
+    android:label="YourAppName"
+    android:icon="@mipmap/ic_launcher">
+    <!-- Branch Key -->
+    <meta-data
+        android:name="io.branch.sdk.BranchKey"
+        android:value="your_branch_key_here" />
+</application>
