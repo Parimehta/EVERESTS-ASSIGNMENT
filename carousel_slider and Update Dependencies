@@ -1,0 +1,18 @@
+In pubspec.yaml, remove the dependency:
+
+# Remove this line:
+# carousel_slider: ^version
+
+Replace image_gallery_saver with saver_gallery
+
+dependencies:
+  saver_gallery: ^1.0.0
+
+Update your imports and logic in any file using image_gallery_saver:
+
+import 'package:saver_gallery/saver_gallery.dart';
+
+Future<void> saveImage(Uint8List imageBytes) async {
+  final result = await SaverGallery.saveImage(imageBytes);
+  print(result);
+}
